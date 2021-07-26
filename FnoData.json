@@ -1,0 +1,1094 @@
+[
+  {
+    "Name": "AARTI INDUSTRIES LTD",
+    "Symbol": "AARTIIND",
+    "Size": 425,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "ACC LIMITED",
+    "Symbol": "ACC",
+    "Size": 500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "ADANI ENTERPRISES LIMITED",
+    "Symbol": "ADANIENT",
+    "Size": 1000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "ADANI PORT & SEZ LTD",
+    "Symbol": "ADANIPORTS",
+    "Size": 1250,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "ALEMBIC PHARMA LTD",
+    "Symbol": "APLLTD",
+    "Size": 550,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "ALKEM LABORATORIES LTD.",
+    "Symbol": "ALKEM",
+    "Size": 200,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "AMARA RAJA BATTERIES LTD.",
+    "Symbol": "AMARAJABAT",
+    "Size": 1000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "AMBUJA CEMENTS LTD",
+    "Symbol": "AMBUJACEM",
+    "Size": 3000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "APOLLO HOSPITALS ENTER. L",
+    "Symbol": "APOLLOHOSP",
+    "Size": 250,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "APOLLO TYRES LTD",
+    "Symbol": "APOLLOTYRE",
+    "Size": 2500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "ASHOK LEYLAND LTD",
+    "Symbol": "ASHOKLEY",
+    "Size": 4500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "ASIAN PAINTS LIMITED",
+    "Symbol": "ASIANPAINT",
+    "Size": 300,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "AU SMALL FINANCE BANK LTD",
+    "Symbol": "AUBANK",
+    "Size": 500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "AUROBINDO PHARMA LTD",
+    "Symbol": "AUROPHARMA",
+    "Size": 650,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "AXIS BANK LIMITED",
+    "Symbol": "AXISBANK",
+    "Size": 1200,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "BAJAJ AUTO LIMITED",
+    "Symbol": "BAJAJ-AUTO",
+    "Size": 250,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "BAJAJ FINANCE LIMITED",
+    "Symbol": "BAJFINANCE",
+    "Size": 125,
+    "IsPreferred": 1,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "BAJAJ FINSERV LTD.",
+    "Symbol": "BAJAJFINSV",
+    "Size": 125,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "BALKRISHNA IND. LTD",
+    "Symbol": "BALKRISIND",
+    "Size": 400,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "BANDHAN BANK LIMITED",
+    "Symbol": "BANDHANBNK",
+    "Size": 1800,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "BANK OF BARODA",
+    "Symbol": "BANKBARODA",
+    "Size": 11700,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "BATA INDIA LTD",
+    "Symbol": "BATAINDIA",
+    "Size": 550,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "BERGER PAINTS (I) LTD",
+    "Symbol": "BERGEPAINT",
+    "Size": 1100,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "BHARAT ELECTRONICS LTD",
+    "Symbol": "BEL",
+    "Size": 3800,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "BHARAT FORGE LTD",
+    "Symbol": "BHARATFORG",
+    "Size": 1500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "BHARAT PETROLEUM CORP  LT",
+    "Symbol": "BPCL",
+    "Size": 1800,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "BHARTI AIRTEL LIMITED",
+    "Symbol": "BHARTIARTL",
+    "Size": 1851,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "BHEL",
+    "Symbol": "BHEL",
+    "Size": 10500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "BIOCON LIMITED.",
+    "Symbol": "BIOCON",
+    "Size": 2300,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "BOSCH LIMITED",
+    "Symbol": "BOSCHLTD",
+    "Size": 50,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "BRITANNIA INDUSTRIES LTD",
+    "Symbol": "BRITANNIA",
+    "Size": 200,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "CADILA HEALTHCARE LIMITED",
+    "Symbol": "CADILAHC",
+    "Size": 2200,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "CANARA BANK",
+    "Symbol": "CANBK",
+    "Size": 5400,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "CHOLAMANDALAM IN & FIN CO",
+    "Symbol": "CHOLAFIN",
+    "Size": 1250,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "CIPLA LTD",
+    "Symbol": "CIPLA",
+    "Size": 650,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "CITY UNION BANK LTD",
+    "Symbol": "CUB",
+    "Size": 3100,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "COAL INDIA LTD",
+    "Symbol": "COALINDIA",
+    "Size": 4200,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "COFORGE LIMITED",
+    "Symbol": "COFORGE",
+    "Size": 375,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "COLGATE PALMOLIVE LTD.",
+    "Symbol": "COLPAL",
+    "Size": 350,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "CONTAINER CORP OF IND LTD",
+    "Symbol": "CONCOR",
+    "Size": 1563,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "CUMMINS INDIA LTD",
+    "Symbol": "CUMMINSIND",
+    "Size": 600,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "DABUR INDIA LTD",
+    "Symbol": "DABUR",
+    "Size": 1250,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "DEEPAK NITRITE LTD",
+    "Symbol": "DEEPAKNTR",
+    "Size": 500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "DIVI'S LABORATORIES LTD",
+    "Symbol": "DIVISLAB",
+    "Size": 200,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "DLF LIMITED",
+    "Symbol": "DLF",
+    "Size": 3300,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "DR. LAL PATH LABS LTD.",
+    "Symbol": "LALPATHLAB",
+    "Size": 250,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "DR. REDDY'S LABORATORIES",
+    "Symbol": "DRREDDY",
+    "Size": 125,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "EICHER MOTORS LTD",
+    "Symbol": "EICHERMOT",
+    "Size": 350,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "ESCORTS INDIA LTD",
+    "Symbol": "ESCORTS",
+    "Size": 550,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "EXIDE INDUSTRIES LTD",
+    "Symbol": "EXIDEIND",
+    "Size": 3600,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "FEDERAL BANK LTD",
+    "Symbol": "FEDERALBNK",
+    "Size": 10000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "GAIL (INDIA) LTD",
+    "Symbol": "GAIL",
+    "Size": 6100,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "GLENMARK PHARMACEUTICALS",
+    "Symbol": "GLENMARK",
+    "Size": 1150,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "GMR INFRASTRUCTURE LTD.",
+    "Symbol": "GMRINFRA",
+    "Size": 22500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "GODREJ CONSUMER PRODUCTS",
+    "Symbol": "GODREJCP",
+    "Size": 1000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "GODREJ PROPERTIES LTD",
+    "Symbol": "GODREJPROP",
+    "Size": 650,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "GRANULES INDIA LIMITED",
+    "Symbol": "GRANULES",
+    "Size": 1550,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "GRASIM INDUSTRIES LTD",
+    "Symbol": "GRASIM",
+    "Size": 475,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "GUJARAT GAS LIMITED",
+    "Symbol": "GUJGASLTD",
+    "Size": 1250,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "HAVELLS INDIA LIMITED",
+    "Symbol": "HAVELLS",
+    "Size": 500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "HCL TECHNOLOGIES LTD",
+    "Symbol": "HCLTECH",
+    "Size": 700,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "HDFC AMC LIMITED",
+    "Symbol": "HDFCAMC",
+    "Size": 200,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "HDFC BANK LTD",
+    "Symbol": "HDFCBANK",
+    "Size": 550,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "HDFC LIFE INS CO LTD",
+    "Symbol": "HDFCLIFE",
+    "Size": 1100,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "HDFC LTD",
+    "Symbol": "HDFC",
+    "Size": 300,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "HERO MOTOCORP LIMITED",
+    "Symbol": "HEROMOTOCO",
+    "Size": 300,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "HINDALCO  INDUSTRIES  LTD",
+    "Symbol": "HINDALCO",
+    "Size": 2150,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "HINDUSTAN PETROLEUM CORP",
+    "Symbol": "HINDPETRO",
+    "Size": 2700,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "HINDUSTAN UNILEVER LTD.",
+    "Symbol": "HINDUNILVR",
+    "Size": 300,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "ICICI BANK LTD.",
+    "Symbol": "ICICIBANK",
+    "Size": 1375,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "ICICI LOMBARD GIC LIMITED",
+    "Symbol": "ICICIGI",
+    "Size": 425,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "ICICI PRU LIFE INS CO LTD",
+    "Symbol": "ICICIPRULI",
+    "Size": 1500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "IDFC FIRST BANK LIMITED",
+    "Symbol": "IDFCFIRSTB",
+    "Size": 9500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "INDIABULLS HSG FIN LTD",
+    "Symbol": "IBULHSGFIN",
+    "Size": 3100,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "INDIAN OIL CORP LTD",
+    "Symbol": "IOC",
+    "Size": 6500,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "INDIAN RAIL TOUR CORP LTD",
+    "Symbol": "IRCTC",
+    "Size": 325,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "INDRAPRASTHA GAS LTD",
+    "Symbol": "IGL",
+    "Size": 1375,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "INDUS TOWERS LIMITED",
+    "Symbol": "INDUSTOWER",
+    "Size": 2800,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "INDUSIND BANK LIMITED",
+    "Symbol": "INDUSINDBK",
+    "Size": 900,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "INFO EDGE (I) LTD",
+    "Symbol": "NAUKRI",
+    "Size": 125,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "INFOSYS LIMITED",
+    "Symbol": "INFY",
+    "Size": 600,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "INTERGLOBE AVIATION LTD",
+    "Symbol": "INDIGO",
+    "Size": 500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "ITC LTD",
+    "Symbol": "ITC",
+    "Size": 3200,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "JINDAL STEEL & POWER LTD",
+    "Symbol": "JINDALSTEL",
+    "Size": 2500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "JSW STEEL LIMITED",
+    "Symbol": "JSWSTEEL",
+    "Size": 1350,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "JUBILANT FOODWORKS LTD",
+    "Symbol": "JUBLFOOD",
+    "Size": 250,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "KOTAK MAHINDRA BANK LTD",
+    "Symbol": "KOTAKBANK",
+    "Size": 400,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "L&T FINANCE HOLDINGS LTD",
+    "Symbol": "L&TFH",
+    "Size": 8924,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "L&T INFOTECH LIMITED",
+    "Symbol": "LTI",
+    "Size": 150,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "L&T TECHNOLOGY SER. LTD.",
+    "Symbol": "LTTS",
+    "Size": 200,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "LARSEN & TOUBRO LTD.",
+    "Symbol": "LT",
+    "Size": 575,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "LIC HOUSING FINANCE LTD",
+    "Symbol": "LICHSGFIN",
+    "Size": 2000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "LUPIN LIMITED",
+    "Symbol": "LUPIN",
+    "Size": 850,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "M&M FIN. SERVICES LTD",
+    "Symbol": "M&MFIN",
+    "Size": 4000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "MAHANAGAR GAS LTD.",
+    "Symbol": "MGL",
+    "Size": 600,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "MAHINDRA & MAHINDRA LTD",
+    "Symbol": "M&M",
+    "Size": 700,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "MANAPPURAM FINANCE LTD",
+    "Symbol": "MANAPPURAM",
+    "Size": 6000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "MARICO LIMITED",
+    "Symbol": "MARICO",
+    "Size": 2000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "MARUTI SUZUKI INDIA LTD.",
+    "Symbol": "MARUTI",
+    "Size": 100,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "MAX FINANCIAL SERV LTD",
+    "Symbol": "MFSL",
+    "Size": 650,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "MINDTREE LIMITED",
+    "Symbol": "MINDTREE",
+    "Size": 400,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "MOTHERSON SUMI SYSTEMS LT",
+    "Symbol": "MOTHERSUMI",
+    "Size": 3500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "MPHASIS LIMITED",
+    "Symbol": "MPHASIS",
+    "Size": 325,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "MRF LTD",
+    "Symbol": "MRF",
+    "Size": 10,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "MUTHOOT FINANCE LIMITED",
+    "Symbol": "MUTHOOTFIN",
+    "Size": 750,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "NATIONAL ALUMINIUM CO LTD",
+    "Symbol": "NATIONALUM",
+    "Size": 17000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "NAVIN FLUORINE INT. LTD",
+    "Symbol": "NAVINFLUOR",
+    "Size": 225,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "NESTLE INDIA LIMITED",
+    "Symbol": "NESTLEIND",
+    "Size": 50,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "NIPPON L I A M LTD",
+    "Symbol": "NAM-INDIA",
+    "Size": 1600,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "NMDC LTD.",
+    "Symbol": "NMDC",
+    "Size": 6700,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "NTPC LTD",
+    "Symbol": "NTPC",
+    "Size": 5700,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "OIL AND NATURAL GAS CORP.",
+    "Symbol": "ONGC",
+    "Size": 7700,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "PAGE INDUSTRIES LTD",
+    "Symbol": "PAGEIND",
+    "Size": 30,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "PETRONET LNG LIMITED",
+    "Symbol": "PETRONET",
+    "Size": 3000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "PFIZER LTD",
+    "Symbol": "PFIZER",
+    "Size": 125,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "PI INDUSTRIES LTD",
+    "Symbol": "PIIND",
+    "Size": 250,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "PIDILITE INDUSTRIES LTD",
+    "Symbol": "PIDILITIND",
+    "Size": 500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "PIRAMAL ENTERPRISES LTD",
+    "Symbol": "PEL",
+    "Size": 275,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "POWER FIN CORP LTD.",
+    "Symbol": "PFC",
+    "Size": 6200,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "POWER GRID CORP. LTD.",
+    "Symbol": "POWERGRID",
+    "Size": 4000,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "PUNJAB NATIONAL BANK",
+    "Symbol": "PNB",
+    "Size": 16000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "PVR LIMITED",
+    "Symbol": "PVR",
+    "Size": 407,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "RBL BANK LIMITED",
+    "Symbol": "RBLBANK",
+    "Size": 2900,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "REC LIMITED",
+    "Symbol": "RECLTD",
+    "Size": 6000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "RELIANCE INDUSTRIES LTD",
+    "Symbol": "RELIANCE",
+    "Size": 250,
+    "IsPreferred": 1,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "SBI LIFE INSURANCE CO LTD",
+    "Symbol": "SBILIFE",
+    "Size": 750,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "SHREE CEMENT LIMITED",
+    "Symbol": "SHREECEM",
+    "Size": 25,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "SHRIRAM TRANSPORT FIN CO.",
+    "Symbol": "SRTRANSFIN",
+    "Size": 400,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "SIEMENS LTD",
+    "Symbol": "SIEMENS",
+    "Size": 275,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "SRF LTD",
+    "Symbol": "SRF",
+    "Size": 125,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "STATE BANK OF INDIA",
+    "Symbol": "SBIN",
+    "Size": 1500,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "STEEL AUTHORITY OF INDIA",
+    "Symbol": "SAIL",
+    "Size": 9500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "SUN PHARMACEUTICAL IND L",
+    "Symbol": "SUNPHARMA",
+    "Size": 1400,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "SUN TV NETWORK LIMITED",
+    "Symbol": "SUNTV",
+    "Size": 1500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "TATA CHEMICALS LTD",
+    "Symbol": "TATACHEM",
+    "Size": 1000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "TATA CONSULTANCY SERV LT",
+    "Symbol": "TCS",
+    "Size": 300,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "TATA CONSUMER PRODUCT LTD",
+    "Symbol": "TATACONSUM",
+    "Size": 1350,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "TATA MOTORS LIMITED",
+    "Symbol": "TATAMOTORS",
+    "Size": 2850,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "TATA POWER CO LTD",
+    "Symbol": "TATAPOWER",
+    "Size": 6750,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "TATA STEEL LIMITED",
+    "Symbol": "TATASTEEL",
+    "Size": 850,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "TECH MAHINDRA LIMITED",
+    "Symbol": "TECHM",
+    "Size": 600,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "THE RAMCO CEMENTS LIMITED",
+    "Symbol": "RAMCOCEM",
+    "Size": 850,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "TITAN COMPANY LIMITED",
+    "Symbol": "TITAN",
+    "Size": 375,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "TORRENT PHARMACEUTICALS L",
+    "Symbol": "TORNTPHARM",
+    "Size": 250,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "TORRENT POWER LTD",
+    "Symbol": "TORNTPOWER",
+    "Size": 1500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "TRENT LTD",
+    "Symbol": "TRENT",
+    "Size": 725,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "TVS MOTOR COMPANY  LTD",
+    "Symbol": "TVSMOTOR",
+    "Size": 1400,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "ULTRATECH CEMENT LIMITED",
+    "Symbol": "ULTRACEMCO",
+    "Size": 100,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "UNITED BREWERIES LTD",
+    "Symbol": "UBL",
+    "Size": 700,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "UNITED SPIRITS LIMITED",
+    "Symbol": "MCDOWELL-N",
+    "Size": 1250,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "UPL LIMITED",
+    "Symbol": "UPL",
+    "Size": 1300,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "VEDANTA LIMITED",
+    "Symbol": "VEDL",
+    "Size": 3100,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "VODAFONE IDEA LIMITED",
+    "Symbol": "IDEA",
+    "Size": 70000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "VOLTAS LTD",
+    "Symbol": "VOLTAS",
+    "Size": 500,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  },
+  {
+    "Name": "WIPRO LTD",
+    "Symbol": "WIPRO",
+    "Size": 1600,
+    "IsPreferred": 0,
+    "IsNifty50": 1
+  },
+  {
+    "Name": "ZEE ENTERTAINMENT ENT LTD",
+    "Symbol": "ZEEL",
+    "Size": 3000,
+    "IsPreferred": 0,
+    "IsNifty50": 0
+  }
+]
