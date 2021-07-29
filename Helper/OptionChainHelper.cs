@@ -14,6 +14,10 @@ namespace FetchOptionChain.Helper
     {
         public static string GetNSEOptionChainUrl(string symbol)
         {
+            if (symbol=="NIFTY" || symbol == "BANKNIFTY")
+            {
+                return $"https://www.nseindia.com/api/option-chain-indices?symbol={symbol}";
+            }
             return $"https://www.nseindia.com/api/option-chain-equities?symbol={symbol}";
         }
 
@@ -44,7 +48,11 @@ namespace FetchOptionChain.Helper
 
         private static List<FnOHighIV> GetHighIVDataFromOptionChain(string symbol, string expiry, NSEOptionChainData source, int IV)
         {
+            if (source.records == null)
+                return null;
+
             var results = new List<FnOHighIV>();
+           
             var cedata = source.records.data
                                         .Where(d => d.expiryDate == expiry &&
                                                 d.CE != null &&
@@ -223,7 +231,7 @@ namespace FetchOptionChain.Helper
                             {
                                 pct = (intrinsic / d.CE.lastPrice) * 100;
                             }
-                            row["CE_INTRINSICPCT"] = pct.ToString("#.00");
+                            row["CE_INTRINSICPCT"] = $"{pct.ToString("#.00")} %";
                             row["CE_TIMEVALUE"] = timevalue.ToString("#.00");
                         }
                         row["CE_INTRINSIC"] = intrinsic.ToString("#.00");
@@ -258,7 +266,7 @@ namespace FetchOptionChain.Helper
                             {
                                 pct = (intrinsic / d.PE.lastPrice) * 100;
                             }
-                            row["PE_INTRINSICPCT"] = pct.ToString("#.00");
+                            row["PE_INTRINSICPCT"] = $"{pct.ToString("#.00")} %";
                             row["PE_TIMEVALUE"] = timevalue.ToString("#.00");
                         }
                         row["PE_INTRINSIC"] = intrinsic.ToString("#.00");
@@ -349,32 +357,36 @@ namespace FetchOptionChain.Helper
                 var cm = optiondata.records.underlyingValue * Convert.ToDouble(info.LotSize);
                 info.CurrentValue = cm;
             }
+            if (table != null)
+            {
+                DataRow[] drsCE = table.Select("CE_ITM=True", "Strike DESC");
+                DataRow[] drsPE = table.Select("PE_ITM=True", "Strike ASC");
+                //DataRow[] drsCE = table.Select($"Strike<={ltp}", "Strike DESC");
+                //DataRow[] drsPE = table.Select($"Strike>={ltp}", "Strike DESC");
+                DataRow drCE = null, drPE = null;
+                if (drsCE.Length > 0)
+                {
+                    drCE = drsCE[0];
+                }
+                if (drsPE.Length > 0)
+                {
+                    drPE = drsPE[0];
+                }
+                var noofdays = DateTime.Parse(expiry).Subtract(DateTime.Now).Days;
 
-            //DataRow[] drsCE = table.Select("CE_ITM=True", "Strike DESC");
-            //DataRow[] drsPE = table.Select("PE_ITM=True", "Strike ASC");
-            //DataRow drCE = null, drPE = null;
-            //if (drsCE.Length > 0)
-            //{
-            //    drCE = drsCE[0];
-            //}
-            //if (drsPE.Length > 0)
-            //{
-            //    drPE = drsPE[0];
-            //}
-            //var noofdays = DateTime.Parse(expiry).Subtract(DateTime.Now).Days;
+                if (drCE != null && drPE != null)
+                {
+                    double iv = GetIVValue(drCE["CE_IV"]) +
+                                GetIVValue(drCE["PE_IV"]) +
+                               GetIVValue(drPE["CE_IV"]) +
+                                GetIVValue(drPE["PE_IV"]);
 
-            //if (drCE != null && drPE != null)
-            //{
-            //    double iv = GetIVValue(drCE["CE_IV"]) +
-            //                GetIVValue(drCE["PE_IV"]) +
-            //               GetIVValue(drPE["CE_IV"]) +
-            //                GetIVValue(drPE["PE_IV"]);
-
-            //    var variance = (iv / 4) * Math.Sqrt((double)noofdays / 365.0);
-            //    info.AvgIV = iv;
-            //    info.LowerRange = ltp - variance;
-            //    info.UpperRange = ltp + variance;
-            //}
+                    var variance = ltp*((iv / 4)/100 * Math.Sqrt((double)noofdays / 365.0));
+                    info.AvgIV = iv;
+                    info.LowerRange = ltp - variance;
+                    info.UpperRange = ltp + variance;
+                }
+            }
 
 
             return info;

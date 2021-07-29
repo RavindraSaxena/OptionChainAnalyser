@@ -14,7 +14,7 @@ namespace FetchOptionChain.Model
         public double Strike { get; set; }
         public double IV { get; set; }
         public double Option_LTP { get; set; }
-        public int OI { get; set; }
+        public double OI { get; set; }
         public double Bid { get; set; }
         public double Ask { get; set; }
         public int Volume { get; set; }

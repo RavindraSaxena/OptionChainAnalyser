@@ -59,7 +59,8 @@
             this.lblOptionChainResult = new System.Windows.Forms.Label();
             this.prgOptionChainProgress = new System.Windows.Forms.ProgressBar();
             this.Information = new System.Windows.Forms.GroupBox();
-            this.chkIsNifty50 = new System.Windows.Forms.CheckBox();
+            this.lblMonthlyRange = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.txtTargetStrikePercent = new System.Windows.Forms.TextBox();
             this.txtTargetLotPrice = new System.Windows.Forms.TextBox();
             this.txtTargetStrike = new System.Windows.Forms.TextBox();
@@ -74,6 +75,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.chkIsNifty50 = new System.Windows.Forms.CheckBox();
             this.btnHighIV = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnOpenSensibull = new System.Windows.Forms.Button();
@@ -142,6 +144,8 @@
             this.grdOptionChain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdOptionChain.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.grdOptionChain.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdOptionChain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -149,13 +153,13 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdOptionChain.DefaultCellStyle = dataGridViewCellStyle1;
-            this.grdOptionChain.Location = new System.Drawing.Point(24, 278);
+            this.grdOptionChain.Location = new System.Drawing.Point(24, 299);
             this.grdOptionChain.Name = "grdOptionChain";
             this.grdOptionChain.ReadOnly = true;
             this.grdOptionChain.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grdOptionChain.Size = new System.Drawing.Size(1038, 353);
+            this.grdOptionChain.Size = new System.Drawing.Size(1038, 332);
             this.grdOptionChain.TabIndex = 6;
             this.grdOptionChain.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.GrdOptionChain_CellFormatting);
             this.grdOptionChain.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.GrdOptionChain_CellMouseDoubleClick);
@@ -375,7 +379,7 @@
             this.lblOptionChainResult.AutoSize = true;
             this.lblOptionChainResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOptionChainResult.ForeColor = System.Drawing.Color.Red;
-            this.lblOptionChainResult.Location = new System.Drawing.Point(30, 252);
+            this.lblOptionChainResult.Location = new System.Drawing.Point(30, 277);
             this.lblOptionChainResult.Name = "lblOptionChainResult";
             this.lblOptionChainResult.Size = new System.Drawing.Size(11, 16);
             this.lblOptionChainResult.TabIndex = 10;
@@ -393,7 +397,8 @@
             // 
             // Information
             // 
-            this.Information.Controls.Add(this.chkIsNifty50);
+            this.Information.Controls.Add(this.lblMonthlyRange);
+            this.Information.Controls.Add(this.label16);
             this.Information.Controls.Add(this.txtTargetStrikePercent);
             this.Information.Controls.Add(this.txtTargetLotPrice);
             this.Information.Controls.Add(this.txtTargetStrike);
@@ -410,20 +415,29 @@
             this.Information.Controls.Add(this.label10);
             this.Information.Location = new System.Drawing.Point(24, 77);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(355, 167);
+            this.Information.Size = new System.Drawing.Size(355, 190);
             this.Information.TabIndex = 12;
             this.Information.TabStop = false;
             this.Information.Text = "Information";
             // 
-            // chkIsNifty50
+            // lblMonthlyRange
             // 
-            this.chkIsNifty50.AutoSize = true;
-            this.chkIsNifty50.Location = new System.Drawing.Point(215, 106);
-            this.chkIsNifty50.Name = "chkIsNifty50";
-            this.chkIsNifty50.Size = new System.Drawing.Size(73, 17);
-            this.chkIsNifty50.TabIndex = 14;
-            this.chkIsNifty50.Text = "Is Nifty 50";
-            this.chkIsNifty50.UseVisualStyleBackColor = true;
+            this.lblMonthlyRange.AutoSize = true;
+            this.lblMonthlyRange.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonthlyRange.Location = new System.Drawing.Point(88, 106);
+            this.lblMonthlyRange.Name = "lblMonthlyRange";
+            this.lblMonthlyRange.Size = new System.Drawing.Size(12, 17);
+            this.lblMonthlyRange.TabIndex = 15;
+            this.lblMonthlyRange.Text = ".";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(13, 106);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(66, 13);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Mon. Range";
             // 
             // txtTargetStrikePercent
             // 
@@ -449,7 +463,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 140);
+            this.label14.Location = new System.Drawing.Point(13, 160);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(47, 13);
             this.label14.TabIndex = 10;
@@ -460,7 +474,7 @@
             this.lblCalcPremium.AutoSize = true;
             this.lblCalcPremium.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalcPremium.ForeColor = System.Drawing.Color.Red;
-            this.lblCalcPremium.Location = new System.Drawing.Point(212, 140);
+            this.lblCalcPremium.Location = new System.Drawing.Point(212, 162);
             this.lblCalcPremium.Name = "lblCalcPremium";
             this.lblCalcPremium.Size = new System.Drawing.Size(12, 18);
             this.lblCalcPremium.TabIndex = 9;
@@ -469,7 +483,7 @@
             // txtPremiumCalc
             // 
             this.txtPremiumCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPremiumCalc.Location = new System.Drawing.Point(86, 135);
+            this.txtPremiumCalc.Location = new System.Drawing.Point(86, 157);
             this.txtPremiumCalc.Name = "txtPremiumCalc";
             this.txtPremiumCalc.Size = new System.Drawing.Size(120, 21);
             this.txtPremiumCalc.TabIndex = 8;
@@ -479,7 +493,7 @@
             // 
             // txtNoOfDays
             // 
-            this.txtNoOfDays.Location = new System.Drawing.Point(86, 106);
+            this.txtNoOfDays.Location = new System.Drawing.Point(86, 128);
             this.txtNoOfDays.Name = "txtNoOfDays";
             this.txtNoOfDays.Size = new System.Drawing.Size(120, 20);
             this.txtNoOfDays.TabIndex = 7;
@@ -487,7 +501,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(13, 106);
+            this.label13.Location = new System.Drawing.Point(13, 133);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(74, 13);
             this.label13.TabIndex = 6;
@@ -517,7 +531,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 75);
+            this.label12.Location = new System.Drawing.Point(13, 79);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 13);
             this.label12.TabIndex = 2;
@@ -526,7 +540,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 50);
+            this.label11.Location = new System.Drawing.Point(13, 52);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 13);
             this.label11.TabIndex = 1;
@@ -540,6 +554,16 @@
             this.label10.Size = new System.Drawing.Size(27, 13);
             this.label10.TabIndex = 0;
             this.label10.Text = "LTP";
+            // 
+            // chkIsNifty50
+            // 
+            this.chkIsNifty50.AutoSize = true;
+            this.chkIsNifty50.Location = new System.Drawing.Point(335, 46);
+            this.chkIsNifty50.Name = "chkIsNifty50";
+            this.chkIsNifty50.Size = new System.Drawing.Size(73, 17);
+            this.chkIsNifty50.TabIndex = 14;
+            this.chkIsNifty50.Text = "Is Nifty 50";
+            this.chkIsNifty50.UseVisualStyleBackColor = true;
             // 
             // btnHighIV
             // 
@@ -672,6 +696,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 656);
+            this.Controls.Add(this.chkIsNifty50);
             this.Controls.Add(this.btnOpenInterest);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnOpenInTradingview);
@@ -767,5 +792,7 @@
         private System.Windows.Forms.CheckBox chkIsNifty50;
         private System.Windows.Forms.CheckBox chkShowNifty50;
         private System.Windows.Forms.Button btnOpenInterest;
+        private System.Windows.Forms.Label lblMonthlyRange;
+        private System.Windows.Forms.Label label16;
     }
 }

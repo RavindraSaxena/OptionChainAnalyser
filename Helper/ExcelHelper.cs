@@ -47,7 +47,7 @@ namespace FetchOptionChain.Helper
             return false;
         }
 
-        public static bool GenerateExcelsheet(string expiry, List<FnOHighIV> data)
+        public static string GenerateExcelsheet(string expiry, List<FnOHighIV> data)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             using (ExcelPackage excel = new ExcelPackage())
@@ -111,9 +111,10 @@ namespace FetchOptionChain.Helper
                 string filename = string.Format("C:\\IVReports\\OptionIVReport_{0}.xlsx", DateTime.Now.ToString("ddMMyyyy_HHmm"));
                 FileInfo excelFile = new FileInfo(filename);
                 excel.SaveAs(excelFile);
+                return filename;
             }
 
-            return false;
+            return string.Empty;
         }
         //private static object[] ConvertToObjectArray(List<FnOSupportResistance> data)
         //{

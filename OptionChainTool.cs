@@ -31,7 +31,7 @@ namespace FetchOptionChain
             prgPremium.Visible = false;
             LoadPriceData();
             LoadSymbols();
-            LoadExpiryData();
+            LoadExpiryData(true);
         }
 
         private void LoadSymbols()
@@ -40,6 +40,9 @@ namespace FetchOptionChain
             {
                 bool isNifty50 = chkShowNifty50.Checked;
                 cmdSymbol.Items.Clear();
+                cmdSymbol.Items.Add("NIFTY");
+                cmdSymbol.Items.Add("BANKNIFTY");
+                cmdSymbol.Items.Add("----");
                 foreach (var d in FnOData.GetFnOMetadata().Where(s => s.IsPreferred == true))
                 {
                     cmdSymbol.Items.Add(d.Symbol);
@@ -68,12 +71,38 @@ namespace FetchOptionChain
             }
         }
 
-        private void LoadExpiryData()
+        private void LoadExpiryData(bool IsIndex)
         {
             cmdExpiry.Items.Clear();
-            cmdExpiry.Items.Add("29-Jul-2021");
-            cmdExpiry.Items.Add("26-Aug-2021");
-            cmdExpiry.Items.Add("30-Sep-2021");
+            if (IsIndex)
+            {
+                //Index expiry
+                cmdExpiry.Items.Add("29-Jul-2021");
+                cmdExpiry.Items.Add("05-Aug-2021");
+                cmdExpiry.Items.Add("12-Aug-2021");
+                cmdExpiry.Items.Add("18-Aug-2021");
+                cmdExpiry.Items.Add("26-Aug-2021");
+                cmdExpiry.Items.Add("02-Sep-2021");
+                cmdExpiry.Items.Add("09-Sep-2021");
+                cmdExpiry.Items.Add("16-Sep-2021");
+                cmdExpiry.Items.Add("23-Sep-2021");
+                cmdExpiry.Items.Add("30-Sep-2021");
+                cmdExpiry.Items.Add("30-Dec-2021");
+                cmdExpiry.Items.Add("31-Mar-2022");
+                cmdExpiry.Items.Add("30-Jun-2022");
+                cmdExpiry.Items.Add("29-Dec-2022");
+                cmdExpiry.Items.Add("29-Jun-2023");
+                cmdExpiry.Items.Add("28-Dec-2023");
+                cmdExpiry.Items.Add("27-Jun-2024");
+                cmdExpiry.Items.Add("26-Jun-2025");
+            }
+            else
+            {
+                //Stock Expiry
+                cmdExpiry.Items.Add("26-Aug-2021");
+                cmdExpiry.Items.Add("30-Sep-2021");
+                cmdExpiry.Items.Add("28-Oct-2021");
+            }
             cmdExpiry.SelectedIndex = 0;
         }
 
@@ -136,9 +165,10 @@ namespace FetchOptionChain
                     SetInfomation(expiry);
                     var (info,data) = await OptionChainHelper.GetOptionChain(symbol, expiry);
                     _info = info;
-                    txtLTP.Text = string.Format(hindi, "{0:c}", info.LTP); 
+                    txtLTP.Text = fs(info.LTP); 
                     txtLotSize.Text = info.LotSize.ToString();
-                    txtCurrentMarketPrice.Text = string.Format(hindi, "{0:c}", info.CurrentValue); 
+                    txtCurrentMarketPrice.Text = fs(info.CurrentValue);
+                    lblMonthlyRange.Text = $"[ {fs(info.LowerRange)} - {fs(info.UpperRange)} ]";
                     if (data == null)
                     {
                         MessageBox.Show("No option chain data.", "Option Chain", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -177,6 +207,33 @@ namespace FetchOptionChain
             grdOptionChain.Columns["Strike"].DefaultCellStyle.Font = new Font("Calibri", 9, FontStyle.Bold);
             grdOptionChain.Columns["CE_IV"].DefaultCellStyle.BackColor = Color.LightGray;
             grdOptionChain.Columns["PE_IV"].DefaultCellStyle.BackColor = Color.LightGray;
+
+
+            
+
+            grdOptionChain.Columns["CE_INTRINSICPCT"].HeaderText = "CE INTRINSIC %";
+            grdOptionChain.Columns["CE_TIMEVALUE"].HeaderText = "CE TIMEVALUE";
+            grdOptionChain.Columns["CE_INTRINSIC"].HeaderText = "CE INTRINSIC";
+            grdOptionChain.Columns["CE_OI"].HeaderText = "CE OI";
+            grdOptionChain.Columns["CE_OIChange"].HeaderText = "CE OI CHANGE";
+            grdOptionChain.Columns["CE_IV"].HeaderText = "CE IV";
+            grdOptionChain.Columns["CE_LTP"].HeaderText = "CE LTP";
+            grdOptionChain.Columns["CE_ASK"].HeaderText = "CE ASK";
+            grdOptionChain.Columns["CE_BID"].HeaderText = "CE BID";
+            grdOptionChain.Columns["Strike"].HeaderText = "STRIKE";
+            grdOptionChain.Columns["PE_BID"].HeaderText = "PE BID";
+            grdOptionChain.Columns["PE_ASK"].HeaderText = "PE ASK";
+            grdOptionChain.Columns["PE_LTP"].HeaderText = "PE LTP";
+            grdOptionChain.Columns["PE_IV"].HeaderText = "PE IV";
+            grdOptionChain.Columns["PE_OIChange"].HeaderText = "PE OI Change";
+            grdOptionChain.Columns["PE_OI"].HeaderText = "PE OI";
+            grdOptionChain.Columns["PE_INTRINSIC"].HeaderText = "PE INTRINSIC";
+            grdOptionChain.Columns["PE_TIMEVALUE"].HeaderText = "PE TIMEVALUE";
+            grdOptionChain.Columns["PE_INTRINSICPCT"].HeaderText = "PE INTRINSIC %";
+
+
+
+
 
             grdOptionChain.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
         }
@@ -391,9 +448,15 @@ namespace FetchOptionChain
                     { }
                     count++;
                 }
-                ExcelHelper.GenerateExcelsheet(cmdExpiry.Text, list);
+                var filename=ExcelHelper.GenerateExcelsheet(cmdExpiry.Text, list);
                 statusStrip1.Items[0].Text = $"Report generated successfully on {DateTime.Now.ToShortTimeString()}";
-                MessageBox.Show("Report generated successfully!!", "Option Tool");
+                if (MessageBox.Show("Report generated successfully. Click yes to open file."
+                                    ,"Option chain report"
+                                    ,MessageBoxButtons.YesNo
+                                    ,MessageBoxIcon.Information,MessageBoxDefaultButton.Button2)==DialogResult.Yes )
+                {
+                    System.Diagnostics.Process.Start(filename);
+                }
             }
             else
             {
@@ -405,7 +468,7 @@ namespace FetchOptionChain
         {
             LoadPriceData();
             LoadSymbols();
-            LoadExpiryData();
+            LoadExpiryData(true);
             HttpHelper.Refresh();
             statusStrip1.Items[0].Text = $"Data refreshed and reloaded successfully on {DateTime.Now.ToShortTimeString()}";
         }
@@ -491,8 +554,12 @@ namespace FetchOptionChain
             if (cmdSymbol.SelectedIndex!=-1)
             {
                 var symbol = cmdSymbol.Text;
-                if (symbol != "----")
+                if (symbol != "----" 
+                    && symbol!= "NIFTY"
+                    && symbol!="BANKNIFTY")
                 {
+                    LoadExpiryData(false);
+
                     var stockdata = FnOData.GetFnOStockInfo(symbol);
                     chkIsNifty50.Checked = stockdata.IsNifty50;
                     if (priceData != null && priceData.Rows.Count > 0)
@@ -506,6 +573,10 @@ namespace FetchOptionChain
                             txtCurrentMarketPrice.Text= string.Format(hindi, "{0:c}", currentPrice* stockdata.Size);
                         }
                     }
+                }
+                else if((symbol == "NIFTY" || symbol != "BANKNIFTY") && symbol != "----")
+                {
+                    LoadExpiryData(true);
                 }
             }
         }
@@ -528,6 +599,11 @@ namespace FetchOptionChain
             var url = $"https://opstra.definedge.com/openinterest";
             //System.Diagnostics.Process.Start("chrome.exe",url);
             System.Diagnostics.Process.Start(url);
+        }
+
+        private string fs(object m)
+        {
+            return string.Format(hindi, "{0:c}", m);
         }
     }
 }
