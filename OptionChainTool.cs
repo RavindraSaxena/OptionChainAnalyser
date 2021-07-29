@@ -77,7 +77,6 @@ namespace FetchOptionChain
             if (IsIndex)
             {
                 //Index expiry
-                cmdExpiry.Items.Add("29-Jul-2021");
                 cmdExpiry.Items.Add("05-Aug-2021");
                 cmdExpiry.Items.Add("12-Aug-2021");
                 cmdExpiry.Items.Add("18-Aug-2021");
