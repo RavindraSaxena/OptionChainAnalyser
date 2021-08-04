@@ -196,6 +196,7 @@ namespace FetchOptionChain
         }
         private void SetGridView(DataTable data)
         {
+            
             grdOptionChain.DataSource = data;
 
             grdOptionChain.Columns["CE_ITM"].Visible = false;
@@ -208,31 +209,27 @@ namespace FetchOptionChain
             grdOptionChain.Columns["PE_IV"].DefaultCellStyle.BackColor = Color.LightGray;
 
 
-            
-
-            grdOptionChain.Columns["CE_INTRINSICPCT"].HeaderText = "CE INTRINSIC %";
-            grdOptionChain.Columns["CE_TIMEVALUE"].HeaderText = "CE TIMEVALUE";
-            grdOptionChain.Columns["CE_INTRINSIC"].HeaderText = "CE INTRINSIC";
-            grdOptionChain.Columns["CE_OI"].HeaderText = "CE OI";
-            grdOptionChain.Columns["CE_OIChange"].HeaderText = "CE OI CHANGE";
-            grdOptionChain.Columns["CE_IV"].HeaderText = "CE IV";
-            grdOptionChain.Columns["CE_LTP"].HeaderText = "CE LTP";
-            grdOptionChain.Columns["CE_ASK"].HeaderText = "CE ASK";
-            grdOptionChain.Columns["CE_BID"].HeaderText = "CE BID";
-            grdOptionChain.Columns["Strike"].HeaderText = "STRIKE";
-            grdOptionChain.Columns["PE_BID"].HeaderText = "PE BID";
-            grdOptionChain.Columns["PE_ASK"].HeaderText = "PE ASK";
-            grdOptionChain.Columns["PE_LTP"].HeaderText = "PE LTP";
-            grdOptionChain.Columns["PE_IV"].HeaderText = "PE IV";
-            grdOptionChain.Columns["PE_OIChange"].HeaderText = "PE OI Change";
-            grdOptionChain.Columns["PE_OI"].HeaderText = "PE OI";
-            grdOptionChain.Columns["PE_INTRINSIC"].HeaderText = "PE INTRINSIC";
-            grdOptionChain.Columns["PE_TIMEVALUE"].HeaderText = "PE TIMEVALUE";
-            grdOptionChain.Columns["PE_INTRINSICPCT"].HeaderText = "PE INTRINSIC %";
 
 
-
-
+            //grdOptionChain.Columns["CE_INTRINSICPCT"].HeaderText = "CE INTRINSIC %";
+            //grdOptionChain.Columns["CE_TIMEVALUE"].HeaderText = "CE TIMEVALUE";
+            //grdOptionChain.Columns["CE_INTRINSIC"].HeaderText = "CE INTRINSIC";
+            //grdOptionChain.Columns["CE_OI"].HeaderText = "CE OI";
+            //grdOptionChain.Columns["CE_OIChange"].HeaderText = "CE OI CHANGE";
+            //grdOptionChain.Columns["CE_IV"].HeaderText = "CE IV";
+            //grdOptionChain.Columns["CE_LTP"].HeaderText = "CE LTP";
+            //grdOptionChain.Columns["CE_ASK"].HeaderText = "CE ASK";
+            //grdOptionChain.Columns["CE_BID"].HeaderText = "CE BID";
+            //grdOptionChain.Columns["Strike"].HeaderText = "STRIKE";
+            //grdOptionChain.Columns["PE_BID"].HeaderText = "PE BID";
+            //grdOptionChain.Columns["PE_ASK"].HeaderText = "PE ASK";
+            //grdOptionChain.Columns["PE_LTP"].HeaderText = "PE LTP";
+            //grdOptionChain.Columns["PE_IV"].HeaderText = "PE IV";
+            //grdOptionChain.Columns["PE_OIChange"].HeaderText = "PE OI Change";
+            //grdOptionChain.Columns["PE_OI"].HeaderText = "PE OI";
+            //grdOptionChain.Columns["PE_INTRINSIC"].HeaderText = "PE INTRINSIC";
+            //grdOptionChain.Columns["PE_TIMEVALUE"].HeaderText = "PE TIMEVALUE";
+            //grdOptionChain.Columns["PE_INTRINSICPCT"].HeaderText = "PE INTRINSIC %";
 
             grdOptionChain.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
         }
