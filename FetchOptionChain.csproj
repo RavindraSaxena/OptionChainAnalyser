@@ -100,15 +100,19 @@
     <Compile Include="AnalysisForm.Designer.cs">
       <DependentUpon>AnalysisForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\CSVHelper.cs" />
     <Compile Include="Helper\ExcelHelper.cs" />
     <Compile Include="Helper\FnOData.cs" />
     <Compile Include="Helper\OptionChainHelper.cs" />
+    <Compile Include="Helper\ReportHelper.cs" />
+    <Compile Include="Helper\UrlHelper.cs" />
     <Compile Include="MDIForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDIForm.Designer.cs">
       <DependentUpon>MDIForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\DeliveryReport.cs" />
     <Compile Include="Model\FnOHighIV.cs" />
     <Compile Include="Model\FnOMetadata.cs" />
     <Compile Include="Model\FnOSupportResistance.cs" />
@@ -152,6 +156,12 @@
     </Compile>
     <None Include="FetchOptionChain_TemporaryKey.pfx" />
     <None Include="FnoData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PreferedList.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Nifty50List.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using FetchOptionChain.Helper;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,6 +64,21 @@ namespace FetchOptionChain
             return string.Empty;
         }
 
+        public async static Task<string> DownloadCSV(string url)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            using (var client = new HttpClient())
+            {
+                client.Timeout = TimeSpan.FromSeconds(timeout); ;
+                var response = await client.GetAsync(url);
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadAsStringAsync();
+                }
+            }
+            return string.Empty;
+        }
+
         public async static Task<string> GetBhavCopy(string url)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
@@ -83,7 +99,7 @@ namespace FetchOptionChain
             {
                 if (!IsCalledFirstTime)
                 {
-                    var generateCookie = "https://www.nseindia.com/option-chain?symbolCode=2266&symbol=JSWSTEEL&symbol=JSWSTEEL&instrument=-&date=-&segmentLink=17&symbolCount=2&segmentLink=17";
+                    var generateCookie = UrlHelper.CookiesUrlForNSE;
                     await GetHTMLWithCookies(generateCookie);
                     IsCalledFirstTime = true;
                 }
@@ -95,7 +111,7 @@ namespace FetchOptionChain
                 if (string.Compare(ex.Message, "Response status code does not indicate success: 401 (Unauthorized).",true)==0)
                 {
                     cookieContainer = new CookieContainer();
-                    var generateCookie = "https://www.nseindia.com/option-chain?symbolCode=2266&symbol=JSWSTEEL&symbol=JSWSTEEL&instrument=-&date=-&segmentLink=17&symbolCount=2&segmentLink=17";
+                    var generateCookie = UrlHelper.CookiesUrlForNSE;
                     await GetHTMLWithCookies(generateCookie);
                     return await GetHTMLWithCookies(baseurl);
                 }
@@ -105,7 +121,7 @@ namespace FetchOptionChain
 
         public async static Task<string> GetFuturePremium(List<KeyValuePair<string, string>> pair)
         {
-            return await GetHTMLOfFuturePremium("https://www.samco.in/option_fair_value_calculator/ajax_chart_display", pair);
+            return await GetHTMLOfFuturePremium(UrlHelper.SamcoCalculatorUrl, pair);
         }
     }
 }

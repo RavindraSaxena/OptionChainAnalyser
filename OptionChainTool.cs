@@ -38,6 +38,7 @@ namespace FetchOptionChain
         {
             try
             {
+                FnOData.Refresh();
                 bool isNifty50 = chkShowNifty50.Checked;
                 cmdSymbol.Items.Clear();
                 cmdSymbol.Items.Add("NIFTY");
@@ -77,9 +78,6 @@ namespace FetchOptionChain
             if (IsIndex)
             {
                 //Index expiry
-                cmdExpiry.Items.Add("05-Aug-2021");
-                cmdExpiry.Items.Add("12-Aug-2021");
-                cmdExpiry.Items.Add("18-Aug-2021");
                 cmdExpiry.Items.Add("26-Aug-2021");
                 cmdExpiry.Items.Add("02-Sep-2021");
                 cmdExpiry.Items.Add("09-Sep-2021");
@@ -474,7 +472,7 @@ namespace FetchOptionChain
             if (cmdExpiry.SelectedIndex != -1 && cmdSymbol.SelectedIndex != -1)
             {
                 var expiry = Convert.ToDateTime(cmdExpiry.Text);
-                var url = $"https://web.sensibull.com/option-chain?expiry={expiry.ToString("yyyy-MM-dd")}&tradingsymbol={cmdSymbol.Text}";
+                var url = $"{UrlHelper.SensibulUrl}?expiry={expiry.ToString("yyyy-MM-dd")}&tradingsymbol={cmdSymbol.Text}";
                 //System.Diagnostics.Process.Start("chrome.exe",url);
                 System.Diagnostics.Process.Start(url);
             }
@@ -495,7 +493,7 @@ namespace FetchOptionChain
 
                 try
                 {
-                    url = $"https://archives.nseindia.com/products/content/sec_bhavdata_full_{d.ToString("ddMMyyyy")}.csv";
+                    url = $"{UrlHelper.BhavCopyUrl}{d.ToString("ddMMyyyy")}.csv";
                     result=await HttpHelper.GetBhavCopy(url);
                 }
                 catch
@@ -503,7 +501,7 @@ namespace FetchOptionChain
                     if (result == string.Empty)
                     {
                         d = DateTime.Now.AddDays(-1);
-                        url = $"https://archives.nseindia.com/products/content/sec_bhavdata_full_{d.ToString("ddMMyyyy")}.csv";
+                        url = $"{UrlHelper.BhavCopyUrl}{d.ToString("ddMMyyyy")}.csv";
                         result = await HttpHelper.GetBhavCopy(url);
                     }
                 }
@@ -539,7 +537,7 @@ namespace FetchOptionChain
             if (cmdExpiry.SelectedIndex != -1 && cmdSymbol.SelectedIndex != -1)
             {
                 var expiry = Convert.ToDateTime(cmdExpiry.Text);
-                var url = $"https://www.tradingview.com/chart/?symbol=NSE:{cmdSymbol.Text}";
+                var url = $"{UrlHelper.TradingviewUrl}{cmdSymbol.Text}";
                 //System.Diagnostics.Process.Start("chrome.exe",url);
                 System.Diagnostics.Process.Start(url);
             }
@@ -600,6 +598,39 @@ namespace FetchOptionChain
         private string fs(object m)
         {
             return string.Format(hindi, "{0:c}", m);
+        }
+
+        private async void btnUpdateFnOStock_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                await FnOData.UpdateFnOListAsync();
+            }
+            catch(Exception ex)
+            {
+                statusStrip1.Items[0].Text = $"{ex.Message} on {DateTime.Now.ToShortTimeString()}";
+            }
+        }
+
+        private async void btnDeliveryVolumeRpt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var r=await ReportHelper.GetDeliveryReportAsync();
+                var filename = ExcelHelper.GenerateDeliveryReport(r);
+                statusStrip1.Items[0].Text = $"Delivery Report generated successfully on {DateTime.Now.ToShortTimeString()}";
+                if (MessageBox.Show("Delivery Report generated successfully. Click yes to open file."
+                                    , "Option chain report"
+                                    , MessageBoxButtons.YesNo
+                                    , MessageBoxIcon.Information, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    System.Diagnostics.Process.Start(filename);
+                }
+            }
+            catch(Exception ex)
+            {
+                statusStrip1.Items[0].Text = $"{ex.Message} on {DateTime.Now.ToShortTimeString()}";
+            }
         }
     }
 }

@@ -98,11 +98,11 @@ namespace FetchOptionChain.Helper
                     worksheet.Cells[count, 13].Value = d.StrikeTotalLotCost;
                     worksheet.Cells[count, 14].Value = d.TotalPremium;
                     worksheet.Cells[count, 15].Value = $"{d.Symbol}-Chart";
-                    worksheet.Cells[count, 15].Hyperlink = new Uri($"https://www.tradingview.com/chart/?symbol=NSE:{d.Symbol}");
+                    worksheet.Cells[count, 15].Hyperlink = new Uri($"{UrlHelper.TradingviewUrl}{d.Symbol}");
                     worksheet.Cells[count, 15].Style.Font.Color.SetColor(Color.Blue);
 
                     worksheet.Cells[count, 16].Value = $"{d.Symbol}-Option Chain";
-                    worksheet.Cells[count, 16].Hyperlink = new Uri($"https://web.sensibull.com/option-chain?expiry={expiryDate.ToString("yyyy-MM-dd")}&tradingsymbol={d.Symbol}");
+                    worksheet.Cells[count, 16].Hyperlink = new Uri($"{UrlHelper.SensibulUrl}?expiry={expiryDate.ToString("yyyy-MM-dd")}&tradingsymbol={d.Symbol}");
                     worksheet.Cells[count, 16].Style.Font.Color.SetColor(Color.Blue);
 
                     count++;
@@ -114,7 +114,57 @@ namespace FetchOptionChain.Helper
                 return filename;
             }
 
-            return string.Empty;
+        }
+
+        public static string GenerateDeliveryReport(List<DeliveryReport> data)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            using (ExcelPackage excel = new ExcelPackage())
+            {
+                var expiryDate = DateTime.Now.ToString("dd-MM-yyyy");
+
+                excel.Workbook.Worksheets.Add(expiryDate);
+
+                // Target a worksheet
+                var worksheet = excel.Workbook.Worksheets[expiryDate];
+
+                int count = 1;
+                worksheet.Cells[count, 1].Value = "Symbol";
+                worksheet.Cells[count, 2].Value = "IsNifty50";
+                worksheet.Cells[count, 3].Value = "IsFNO";
+                worksheet.Cells[count, 4].Value = "Prev Close";
+                worksheet.Cells[count, 5].Value = "LTP";
+                worksheet.Cells[count, 6].Value = "Change Pct";
+                worksheet.Cells[count, 7].Value = "Delivery Pct";
+                worksheet.Cells[count, 8].Value = "Tradingview Link";
+
+
+                count = 2;
+                foreach (var d in data
+                                    .OrderByDescending(s=>s.DeliveryPercent)
+                                    .ThenByDescending(s=>s.ChangePercent))
+                {
+                    worksheet.Cells[count, 1].Value = d.Symbol;
+                    worksheet.Cells[count, 2].Value = d.IsNifty50;
+                    worksheet.Cells[count, 3].Value = d.IsFNO;
+                    worksheet.Cells[count, 4].Value = d.PrevClosePrice;
+                    worksheet.Cells[count, 5].Value = d.ClosePrice;
+                    worksheet.Cells[count, 6].Value = Math.Round(d.ChangePercent,2);
+                    worksheet.Cells[count, 7].Value = Math.Round(d.DeliveryPercent,2);
+
+                    worksheet.Cells[count, 8].Value = $"{d.Symbol}-Chart";
+                    worksheet.Cells[count, 8].Hyperlink = new Uri($"{UrlHelper.TradingviewUrl}{d.Symbol}");
+                    worksheet.Cells[count, 8].Style.Font.Color.SetColor(Color.Blue);
+
+                    count++;
+                }
+
+                string filename = string.Format("C:\\IVReports\\DeliveryReport_{0}.xlsx", DateTime.Now.ToString("ddMMyyyy_HHmm"));
+                FileInfo excelFile = new FileInfo(filename);
+                excel.SaveAs(excelFile);
+                return filename;
+            }
+
         }
         //private static object[] ConvertToObjectArray(List<FnOSupportResistance> data)
         //{

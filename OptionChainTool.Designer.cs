@@ -88,6 +88,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnOpenInterest = new System.Windows.Forms.Button();
+            this.btnUpdateFnOStock = new System.Windows.Forms.Button();
+            this.btnDeliveryVolumeRpt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdOptionChain)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.Information.SuspendLayout();
@@ -648,6 +650,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnUpdateFnOStock);
+            this.groupBox2.Controls.Add(this.btnDeliveryVolumeRpt);
             this.groupBox2.Controls.Add(this.chkShowNifty50);
             this.groupBox2.Controls.Add(this.numHighIV);
             this.groupBox2.Controls.Add(this.btnDownloadPrice);
@@ -665,7 +669,7 @@
             // chkShowNifty50
             // 
             this.chkShowNifty50.AutoSize = true;
-            this.chkShowNifty50.Location = new System.Drawing.Point(28, 178);
+            this.chkShowNifty50.Location = new System.Drawing.Point(215, 184);
             this.chkShowNifty50.Margin = new System.Windows.Forms.Padding(4);
             this.chkShowNifty50.Name = "chkShowNifty50";
             this.chkShowNifty50.Size = new System.Drawing.Size(116, 21);
@@ -694,7 +698,7 @@
             // 
             // btnDownloadPrice
             // 
-            this.btnDownloadPrice.Location = new System.Drawing.Point(28, 137);
+            this.btnDownloadPrice.Location = new System.Drawing.Point(27, 179);
             this.btnDownloadPrice.Margin = new System.Windows.Forms.Padding(4);
             this.btnDownloadPrice.Name = "btnDownloadPrice";
             this.btnDownloadPrice.Size = new System.Drawing.Size(163, 28);
@@ -751,6 +755,27 @@
             this.btnOpenInterest.Text = "OI Charts";
             this.btnOpenInterest.UseVisualStyleBackColor = true;
             this.btnOpenInterest.Click += new System.EventHandler(this.BtnOpenInterest_Click);
+            // 
+            // btnUpdateFnOStock
+            // 
+            this.btnUpdateFnOStock.Location = new System.Drawing.Point(27, 147);
+            this.btnUpdateFnOStock.Name = "btnUpdateFnOStock";
+            this.btnUpdateFnOStock.Size = new System.Drawing.Size(163, 25);
+            this.btnUpdateFnOStock.TabIndex = 21;
+            this.btnUpdateFnOStock.Text = "FnO List Update";
+            this.btnUpdateFnOStock.UseVisualStyleBackColor = true;
+            this.btnUpdateFnOStock.Click += new System.EventHandler(this.btnUpdateFnOStock_Click);
+            // 
+            // btnDeliveryVolumeRpt
+            // 
+            this.btnDeliveryVolumeRpt.Location = new System.Drawing.Point(27, 63);
+            this.btnDeliveryVolumeRpt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeliveryVolumeRpt.Name = "btnDeliveryVolumeRpt";
+            this.btnDeliveryVolumeRpt.Size = new System.Drawing.Size(163, 28);
+            this.btnDeliveryVolumeRpt.TabIndex = 21;
+            this.btnDeliveryVolumeRpt.Text = "Volume Report";
+            this.btnDeliveryVolumeRpt.UseVisualStyleBackColor = true;
+            this.btnDeliveryVolumeRpt.Click += new System.EventHandler(this.btnDeliveryVolumeRpt_Click);
             // 
             // OptionChainTool
             // 
@@ -856,5 +881,7 @@
         private System.Windows.Forms.Button btnOpenInterest;
         private System.Windows.Forms.Label lblMonthlyRange;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnUpdateFnOStock;
+        private System.Windows.Forms.Button btnDeliveryVolumeRpt;
     }
 }
